@@ -1,6 +1,6 @@
 {% extends 'base.html'%}
 {%block title%}
-Home
+The Unknowns
 {%endblock%}
 {%block content%}
 
@@ -100,14 +100,14 @@ Home
         {%for p in p%}
         
         <div class="col-lg-6">
-          <a class="portfolio-item" href="{{p.link}}" target="_blank">
+          <a class="portfolio-item"" href="{{p.link}}" target="_blank">
             <span class="caption">
               <span class="caption-content">
                 <h2>{{p.title}} <br><i>{{p.company}} ({{p.year_completed}})</i></h2>
                 <p class="mb-0">{{p.info}}</p>
               </span>
             </span>
-            <img class="img-fluid" src="{{p.image}}" alt="">
+            <img class="img-fluid"  src="{{p.image}}" alt="">
           </a>
         </div>
 {%endfor%}
