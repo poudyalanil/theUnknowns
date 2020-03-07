@@ -14,6 +14,7 @@ class portfoliodtl(db.Model):
     year_completed = db.Column(db.Integer)
     info = db.Column(db.String(500), nullable = False)
     image = db.Column(db.String(2083), nullable = False)
+    link = db.Column(db.String(2083))
 
     def __repr__(self):
          return '<Task %r>' % self.id
@@ -37,14 +38,16 @@ def portfolio():
         name = request.form['name']
         year = request.form['year']
         images = request.form['image']
-        infos =request.form['info']
+        infos =request.form['info'],
+        links =request.form['link']
         
         newPortfolio = portfoliodtl(
             title=titles,
             company=name,
             year_completed=year,
             info=infos,
-            image=images
+            image=images,
+            link = links
 
         )
         try:
@@ -82,6 +85,8 @@ def update(id):
         pl.year = request.form['year']
         pl.images = request.form['image']
         pl.infos =request.form['info']
+        pl.link =request.form['link']
+
         
         try:
             
