@@ -5,34 +5,84 @@ Add New Portfolio
 
 {%block content%}
 <div class="container pt-5">
-    <form action="/" method="POST">
+    <form method="POST">
     
         <div class="form-group">
-            <label for="Title">Title</label>
-            <input type="text" class="form-control" id="title" placeholder="The Unkonwns Account Management System">
+            <label for="Title">Title*</label>
+            <input type="text" class="form-control" name="title" placeholder="The Unkonwns Account Management System" required>
           </div>
     
           <div class="form-group">
             <label for="Company Name">Company Name</label>
-            <input type="text" class="form-control" id="name" placeholder="The Unkonwns ">
+            <input type="text" class="form-control" name="name" placeholder="The Unkonwns ">
           </div>
 
           <div class="form-group">
-            <label for="Company Name">Year</label>
-            <input type="number" class="form-control" id="year" placeholder="2020">
+            <label for="Company Name">Year*</label>
+            <input type="number" class="form-control" name="year" placeholder="2020" required>
           </div>
           <div class="form-group">
-            <label for="Company Name">Project Image</label>
-            <input type="text" class="form-control" id="Image" placeholder="Make sure URL works">
+            <label for="Company Name">Project Image*</label>
+            <input type="text" class="form-control" name="image" placeholder="Make sure URL works" required>
           </div>
        
         <div class="form-group">
-          <label for="exampleFormControlTextarea1">Project Info</label>
-          <textarea class="form-control" id="info" rows="3" placeholder="
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti excepturi maiores quas deserunt voluptate laborum fugit at culpa assumenda! Perferendis."></textarea>
+          <label for="exampleFormControlTextarea1">Project Info*</label>
+          <input type="text" class="form-control" name="info" rows="3" placeholder="
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti excepturi maiores quas deserunt voluptate laborum fugit at culpa assumenda! Perferendis." required></textarea>
         </div>
         <input class="btn btn-primary" style="background-color: #1D809f;" type="submit">
       </form>
+
+
+<br><br><br><br><hr><hr>
+
+<h1 class="text-center">Added Portfolio</h1>
+
+<br><br>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+		<table class="table table-image">
+		  <thead>
+		    <tr>
+		      <th scope="col">ID</th>
+		      <th scope="col">Image</th>
+		      <th scope="col">Title</th>
+		      <th scope="col">Company</th>
+		      <th scope="col">Year</th>
+          <th scope="col">Info</th>
+          
+		    </tr>
+		  </thead>
+		  <tbody>
+        {%for p in p%}
+		    <tr>
+		      <th scope="row">{{p.id}}</th>
+		      <td class="w-25">
+			      <img src="{{p.image}}" class="img-fluid img-thumbnail" alt="Sheep">
+		      </td>
+		      <td>{{p.title}}</td>
+		      <td>{{p.company}}</td>
+		      <td>{{p.year_completed}}</td>
+          <td>{{p.info}}</td>
+          <td>
+
+            <a href="/delete/{{p.id}}" style="text-decoration:none">
+            <button type="button" class="btn btn-danger">Delete</button>
+          </a>
+          <a href="/update/{{p.id}}" style="text-decoration:none">
+            <button type="button" class="btn btn-warning">Edit</button>
+</a>
+          </td>
+		    </tr>
+{%endfor%}		    
+		  </tbody>
+		</table>   
+    </div>
+  </div>
+</div>
+
 </div>
 
 {%endblock%}

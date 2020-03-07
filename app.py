@@ -16,16 +16,16 @@ class portfoliodtl(db.Model):
     image = db.Column(db.String(2083), nullable = False)
 
     def __repr__(self):
-        return self.title
+         return '<Task %r>' % self.id
 
 
 
 
 
-@app.route('/', methods = ['GET'])
+@app.route('/', methods = ['GET','POST'])
 def index():
     portfolio = portfoliodtl.query.all()
-    return render_template('/index.html', portfolio = portfolio)
+    return render_template('/index.html', p = portfolio)
 
 
 
@@ -33,14 +33,14 @@ def index():
 @app.route('/addportfolio', methods = ['POST','GET'])
 def portfolio():
     if request.method =='POST':
-        title = request.form['title']
+        titles = request.form['title']
         name = request.form['name']
         year = request.form['year']
         images = request.form['image']
         infos =request.form['info']
         
         newPortfolio = portfoliodtl(
-            title=title,
+            title=titles,
             company=name,
             year_completed=year,
             info=infos,
@@ -50,12 +50,49 @@ def portfolio():
         try:
             db.session.add(newPortfolio)
             db.session.commit()
+             
             return redirect('/')
         except:
             return "Couldnot add a portfolio "
     else:
-        return render_template('/addPortfolio.html')
+        portfolio = portfoliodtl.query.all()
+        return render_template('/addPortfolio.html',p = portfolio)
 
+
+@app.route('/delete/<int:id>')
+def delete(id):
+    del_portfolio = portfoliodtl.query.get_or_404(id)
+
+    try:
+        db.session.delete(del_portfolio)
+        db.session.commit()
+        return redirect('/addportfolio')
+    except:
+        return "Error!!!!!!!!"
+
+@app.route('/update/<int:id>', methods = ['GET','POST'])
+def update(id):
+    pl = portfoliodtl.query.get_or_404(id)
+
+
+
+    if request.method =='POST':
+        pl.titles = request.form['title']
+        pl.name = request.form['name']
+        pl.year = request.form['year']
+        pl.images = request.form['image']
+        pl.infos =request.form['info']
+        
+        try:
+            
+            db.session.commit()
+             
+            return redirect('/')
+        except:
+            return "Couldnot update a portfolio "
+    else:
+        portfolio = portfoliodtl.query.all()
+        return render_template('/editPortfolio.html',p = pl)
 
 if __name__=='__main__':
     app.run(debug=True)

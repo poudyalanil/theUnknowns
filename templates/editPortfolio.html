@@ -1,0 +1,42 @@
+{%extends 'base2.html'%}
+{%block title%}
+Add New Portfolio
+{%endblock%}
+
+{%block content%}
+<div class="container pt-5">
+    <form method="POST">
+    
+        <div class="form-group">
+            <label for="Title">Title*</label>
+            <input type="text" class="form-control" name="title" placeholder="The Unkonwns Account Management System"  value = "{{p.title}}">
+          </div>
+    
+          <div class="form-group">
+            <label for="Company Name">Company Name</label>
+            <input type="text" class="form-control" name="name" placeholder="The Unkonwns " value = "{{p.company}}">
+          </div>
+
+          <div class="form-group">
+            <label for="Company Name">Year*</label>
+            <input type="number" class="form-control" name="year" placeholder="2020" value = "{{p.year_completed}}" >
+          </div>
+          <div class="form-group">
+            <label for="Company Name">Project Image*</label>
+            <input type="text" class="form-control" name="image" placeholder="Make sure URL works"  value = "{{p.image}}">
+          </div>
+       
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Project Info*</label>
+          <input type = "text" class="form-control" name="info" rows="3" value ="{{p.info}}"></inpu>
+        </div>
+        <input class="btn btn-primary" style="background-color: #1D809f;" type="submit">
+      </form>
+
+
+<br><br><br><br><hr><hr>
+<a href="/addportfolio" class="text-center" style="text-decoration: none;"><h5>Add New Portfolio</h5></a>
+
+
+
+{%endblock%}
