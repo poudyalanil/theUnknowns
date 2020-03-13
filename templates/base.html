@@ -1,118 +1,194 @@
-<!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="zxx">
 
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{%block title%}
+      
+      {%endblock%}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <!-- Place favicon.ico in the root directory -->
 
-  <title>
-      {%block title%}
-      {%endblock%}
-  </title>
-
-  <!-- Bootstrap Core CSS -->
-  <link href="{{ url_for ( 'static', filename= 'vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
-
-  <!-- Custom Fonts -->
-  <link href="{{url_for( 'static', filename='vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Sourcevendor/fontawesome-free/css/all.min.css+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-  <link href="{{ url_for ( 'static', filename= 'vendor/simple-line-icons/css/simple-line-icons.css')}}" rel="stylesheet">
-
-  <!-- Custom CSS -->
-  <link href="{{ url_for ( 'static', filename= 'css/stylish-portfolio.min.css')}}" rel="stylesheet">
-
-  <style>
-      body::-webkit-scrollbar {
-  width: 1em;
-}
- 
-body::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-}
- 
-body::-webkit-scrollbar-thumb {
-  background-color: #1D809f;
-  outline: 1px solid #fff;
-}
-
-  </style>
+    <!-- CSS here -->
+    <!-- {{ url_for('static',filename='vendor/jquery/jquery.min.js')}} -->
+    <link rel="stylesheet" href="{{url_for ('static',filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for ('static',filename='css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{url_for ('static',filename='css/magnific-popup.css')}}">
+    <link rel="stylesheet" href="{{url_for ('static',filename='css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{url_for ('static',filename='css/themify-icons.css')}}">
+    <link rel="stylesheet" href="{{url_for ('static',filename='css/nice-select.css')}}">
+    <link rel="stylesheet" href="{{url_for ('static',filename='css/flaticon.css')}}">
+    <link rel="stylesheet" href="{{url_for ('static',filename='css/gijgo.css')}}">
+    <link rel="stylesheet" href="{{url_for ('static',filename='css/animate.min.css')}}">
+    <link rel="stylesheet" href="{{url_for ('static',filename='css/slick.css')}}">
+    <link rel="stylesheet" href="{{url_for ('static',filename='css/slicknav.css')}}">
+    <link rel="stylesheet" href="{{url_for ('static',filename='css/style.css')}}">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>
+
 <body>
-    <!-- Navigation -->
-  <a class="menu-toggle rounded" href="#">
-    <i class="fas fa-bars"></i>
-  </a>
-  <nav id="sidebar-wrapper">
-    <ul class="sidebar-nav">
-      <li class="sidebar-brand">
-        <a class="js-scroll-trigger" href="#page-top">The Unknowns</a>
-      </li>
-      <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#page-top">Home</a>
-      </li>
-      <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#about">About</a>
-      </li>
-      <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#services">Services</a>
-      </li>
-      <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#portfolio">Portfolio</a>
-      </li>
-      <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#contact">Contact</a>
-      </li>
-      <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#">Blogs <i class="fa fa-cog fa-spin  fa-fw"></i> <br><i style="color: yellowgreen;">Under Construction</i></a>
-      </li>
-    </ul>
-  </nav>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-xl-3 col-lg-2">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="img/logo.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-10">
+                            <div class="main-menu  d-none d-lg-block text-right">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a class="active" href="index.html">home</a></li>
+                                        <li><a href="about.html">About</a></li>
+                                        
+                                        <li><a href="#">blog <i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a href="blog.html">blog</a></li>
+                                                <li><a href="single-blog.html">single-blog</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">pages <i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                                    <li><a href="portfolio-work.html">Portfolio work</a></li>
+                                                 <li><a href="work_details.html">work details</a></li>
+                                                 <li><a href="services.html">Services</a></li>
+                                                 <li><a href="elements.html">elements</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
 
 {%block content%}
 {%endblock%}
 
 <!-- Footer -->
-<footer class="footer text-center">
-    <div class="container">
-      <ul class="list-inline mb-5">
-        <li class="list-inline-item">
-          <a class="social-link rounded-circle text-white mr-3" href="#">
-            <i class="icon-social-facebook"></i>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a class="social-link rounded-circle text-white mr-3" href="#">
-            <i class="icon-social-twitter"></i>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a class="social-link rounded-circle text-white" href="#">
-            <i class="icon-social-github"></i>
-          </a>
-        </li>
-      </ul>
-      <p class="text-muted small mb-0">Copyright &copy; The Unknowns 2020</p>
+  <!-- footer start -->
+  <footer class="footer">
+    <div class="footer_top">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4 col-md-6 col-lg-4">
+                    <div class="footer_widget">
+                       <div class="logo_footer">
+                           <a href="index.html">
+                               <img src="img/logo.png" alt="">
+                           </a>
+                       </div>
+
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 col-lg-3">
+                    <div class="footer_widget">
+                        <h3 class="footer_title">
+                                Services
+                        </h3>
+                        <ul>
+                            <li><a href="#">Web Design</a></li>
+                            <li><a href="#">3D Modeling</a></li>
+                            <li><a href="#">Architectural Design</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 col-lg-3">
+                    <div class="footer_widget">
+                        <h3 class="footer_title">
+                            Useful Links
+                        </h3>
+                        <ul>
+                            <li><a href="#">Work</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-6 col-lg-2">
+                    <div class="footer_widget">
+                        <h3 class="footer_title">
+                                Follow Us
+                        </h3>
+                        <ul>
+                            <li><a href="#">Dribbble</a></li>
+                            <li><a href="#">Behance</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Facebook</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </footer>
+    <div class="copy-right_text">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <p class="copy_right text-center">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--/ footer end  -->
 
-  <!-- Scroll to Top Button-->
-  <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-  </a>
+<!-- JS here -->
+<!-- {{ url_for('static',filename='vendor/jquery/jquery.min.js')}} -->
+<script src="{{ url_for('static', filename='js/vendor/modernizr-3.5.0.min.js')}}"></script>
+<script src="{{ url_for('static', filename='js/vendor/jquery-1.12.4.min.js')}}"></script>
+<script src="{{ url_for('static', filename='js/popper.min.js')}}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.min.js')}}"></script>
+<script src="{{ url_for('static', filename='js/owl.carousel.min.js')}}"></script>
+<script src="{{ url_for('static', filename='js/isotope.pkgd.min.js')}}"></script>
+<script src="{{ url_for('static', filename='js/ajax-form.js')}}"></script>
+<script src="{{ url_for('static', filename='js/waypoints.min.js')}}"></script>
+<script src="{{ url_for('static', filename='js/jquery.counterup.min.js')}}"></script>
+<script src="{{ url_for('static', filename='js/imagesloaded.pkgd.min.js')}}"></script>
+<script src="{{ url_for('static', filename='js/scrollIt.js')}}"></script>
+<script src="{{ url_for('static', filename='js/jquery.scrollUp.min.js')}}"></script>
+<script src="{{ url_for('static', filename='js/wow.min.js')}}"></script>
+<script src="{{ url_for('static', filename='js/nice-select.min.js')}}"></script>
+<script src="{{ url_for('static', filename='js/jquery.slicknav.min.js')}}"></script>
+<script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js')}}"></script>
+<script src="{{ url_for('static', filename='js/plugins.js')}}"></script>
+<script src="{{ url_for('static', filename='js/gijgo.min.js')}}"></script>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="{{ url_for('static',filename='vendor/jquery/jquery.min.js')}}"></script>
-  <script src="{{ url_for('static',filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+<!--contact js-->
+<script src="{{ url_for('static', filename='js/contact.js')}}"></script>
+<script src="{{ url_for('static', filename='js/jquery.ajaxchimp.min.js')}}"></script>
+<script src="{{ url_for('static', filename='js/jquery.form.js')}}"></script>
+<script src="{{ url_for('static', filename='js/jquery.validate.min.js')}}"></script>
+<script src="{{ url_for('static', filename='js/mail-script.js')}}"></script>
 
-  <!-- Plugin JavaScript -->
-  <script src="{{ url_for('static',filename='vendor/jquery-easing/jquery.easing.min.js')}}"></script>
-
-  <!-- Custom scripts for this template -->
-  <script src="{{ url_for('static',filename='js/stylish-portfolio.min.js')}}"></script>
-
+<script src="{{ url_for('static', filename='js/main.js')}}"></script>
 </body>
 
 </html>

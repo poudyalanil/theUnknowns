@@ -5,130 +5,297 @@ The Unknowns
 {%block content%}
 
   <!-- Header -->
-  <header class="masthead d-flex">
-    <div class="container text-center my-auto">
-      <h1 class="mb-1">The Unknowns</h1>
-      <h3 class="mb-5">
-        <em>Ready to be known!!</em>
-      </h3>
-      <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Know Us...</a>
+     <!-- slider_area_start -->
+    <div class="slider_area">
+        <div class="single_slider  d-flex align-items-center slider_bg_1">
+            <div class="outline_text d-none d-lg-block">
+                    Portfolio
+            </div>
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-xl-12">
+                        <div class="slider_text text-center">
+                            <span>Hello Everyone</span>
+                            <h3>
+                                    World class consumer and trends research capabilities we design for tomorrow customers in tomorrow’s markets.
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="overlay"></div>
-  </header>
+    <!-- slider_area_end -->
 
-  <!-- About -->
-  <section class="content-section bg-light" id="about">
-    <div class="container text-center">
-      <div class="row">
-        <div class="col-lg-10 mx-auto">
-          <h2>The Unknowns are the perfect ones for your next project!</h2>
-          <p class="lead mb-5">We at <strong>The Unknowns </strong> build your requirements with love. </p>
-          <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">What We Offer</a>
+
+    <div class="portfolio_area">
+        <!-- <div class="container-fluid p-0"> -->
+            <div class="portfolio_wrap">
+              {%for p in p%}
+                <div class=" single_gallery">
+                    <div class="thumb">
+                        <img src="{{p.image}}" alt="">
+                    </div>
+                    <div class="gallery_hover">
+                        <div class="hover_inner">
+                                <span>{{p.title}}</span>
+                                <a href=""> <h3>{{p.info}}</h3></a>
+                                
+                        </div>
+                    </div>
+                </div>
+                {%endfor%}
+            </div>
+        <!-- </div> -->
+        <div class="more_works text-center">
+            <a href="portfolio-work.html">More Works</a>
         </div>
-      </div>
     </div>
-  </section>
 
-  <!-- Services -->
-  <section class="content-section bg-primary text-white text-center" id="services">
-    <div class="container">
-      <div class="content-section-heading">
-        <h3 class="text-secondary mb-0">Services</h3>
-        <h2 class="mb-5">What We Offer</h2>
-      </div>
-      <div class="row">
-        <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-          <span class="service-icon rounded-circle mx-auto mb-3">
-            <i class="fa fa-desktop"></i>
-          </span>
-          <h4>
-            <strong>System Design</strong>
-          </h4>
-          <p class="text-faded mb-0">We engineer system that is flawless and gurantees scalability</p>
+
+    <!-- service_area  -->
+    <div class="service_area">
+            <div class="outline_text white d-none d-lg-block">
+                    Services
+            </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="single_service">
+                        <div class="icon">
+                            <img src="img/svg_icon/1.svg" alt="">
+                        </div>
+                        <h3>3D Modeling</h3>
+                        <p>A wonderful serenity has taken to the  <br> possession of my entire soul network <br> infrastructure, including consolidation of <br> established network designed and</p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="single_service">
+                        <div class="icon">
+                            <img src="img/svg_icon/2.svg" alt="">
+                        </div>
+                        <h3>UI/UX Design</h3>
+                        <p>A wonderful serenity has taken to the  <br> possession of my entire soul network <br> infrastructure, including consolidation of <br> established network designed and</p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="single_service">
+                        <div class="icon">
+                            <img src="img/svg_icon/3.svg" alt="">
+                        </div>
+                        <h3>Architectural Design</h3>
+                        <p>A wonderful serenity has taken to the  <br> possession of my entire soul network <br> infrastructure, including consolidation of <br> established network designed and</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-          <span class="service-icon rounded-circle mx-auto mb-3">
-            <i class="icon-globe"></i>
-          </span>
-          <h4>
-            <strong>Web Development</strong>
-          </h4>
-          <p class="text-faded mb-0">We Design clean, attractive and modern siter with best UI and UX</p>
-        </div>
-        <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
-          <span class="service-icon rounded-circle mx-auto mb-3">
-            <i class="icon-like"></i>
-          </span>
-          <h4>
-            <strong>Favorited</strong>
-          </h4>
-          <p class="text-faded mb-0">Millions of users
-            <i class="fas fa-heart"></i>
-            Start Bootstrap!</p>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <span class="service-icon rounded-circle mx-auto mb-3">
-            <i class="icon-mustache"></i>
-          </span>
-          <h4>
-            <strong>Question</strong>
-          </h4>
-          <p class="text-faded mb-0">I mustache you a question...</p>
-        </div>
-      </div>
     </div>
-  </section>
+    <!--/ service_area  -->
 
-  <!-- Callout -->
-  <section class="callout">
-    <div class="container text-center">
-      <h2 class="mx-auto mb-5">We create with love </h2>
-       </div>
-  </section>
-
-  <!-- Portfolio -->
-  <section class="content-section" id="portfolio">
-    <div class="container">
-      <div class="content-section-heading text-center">
-        <h3 class="text-secondary mb-0">Portfolio</h3>
-        <h2 class="mb-5">Recent Projects</h2>
-      </div>
-      <div class="row no-gutters">
-        {%for p in p%}
-        
-        <div class="col-lg-6">
-          <a class="portfolio-item"" href="{{p.link}}" target="_blank">
-            <span class="caption">
-              <span class="caption-content">
-                <h2>{{p.title}} <br><i>{{p.company}} ({{p.year_completed}})</i></h2>
-                <p class="mb-0">{{p.info}}</p>
-              </span>
-            </span>
-            <img class="img-fluid" style="max-height:200px;" src="{{p.image}}" alt="">
-          </a>
+    <div class="creative_blog_area">
+            <div class="outline_text blog d-none d-lg-block ">
+                    Blog
+            </div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-9 col-md-6">
+                    <div class="blog_title">
+                        <h3>Our Creative Articles</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="more_blog">
+                        <a href="#" class="boxed-btn3">More Blogs</a>
+                    </div>
+                </div>
+            </div>
         </div>
-{%endfor%}
-        
-      </div>
-    </div>
-  </section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="creative_blog_active owl-carousel">
+                        <div class="single_blog">
+                            <div class="thumb">
+                                <a href="#">
+                                    <img src="img/creative_blog/1.png" alt="">
+                                </a>
+                            </div>
+                            <div class="blog_content">
+                                <a href="#">
+                                    <span class="date">October 19, 2019</span>
+                                </a>
+                                <a href="#">
+                                    <h3>Industry as their over draft</h3>
+                                </a>
+                                <div class="owner_info">
+                                    <div class="author_thumb">
+                                        <img src="img/creative_blog/author2.png" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <a href="#"><h4>Mesica Chouhan</h4></a>
+                                        <p>Business Owner</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single_blog">
+                            <div class="thumb">
+                                <a href="#">
+                                    <img src="img/creative_blog/2.png" alt="">
+                                </a>
+                            </div>
+                            <div class="blog_content">
+                                <a href="#">
+                                    <span class="date">October 19, 2019</span>
+                                </a>
+                                <a href="#">
+                                    <h3>Construction their over draft</h3>
+                                </a>
+                                <div class="owner_info">
+                                    <div class="author_thumb">
+                                        <img src="img/creative_blog/author3.png" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <a href="#"><h4>Mesica Chouhan</h4></a>
+                                        <p>Business Owner</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single_blog">
+                            <div class="thumb">
+                                <a href="#">
+                                    <img src="img/creative_blog/3.png" alt="">
+                                </a>
+                            </div>
+                            <div class="blog_content">
+                                <a href="#">
+                                    <span class="date">October 19, 2019</span>
+                                </a>
+                                <a href="#">
+                                    <h3>Industry as their over draft</h3>
+                                </a>
+                                <div class="owner_info">
+                                    <div class="author_thumb">
+                                        <img src="img/creative_blog/author.png" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <a href="#"><h4>Mesica Chouhan</h4></a>
+                                        <p>Business Owner</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single_blog">
+                            <div class="thumb">
+                                <a href="#">
+                                    <img src="img/creative_blog/4.png" alt="">
+                                </a>
+                            </div>
+                            <div class="blog_content">
+                                <a href="#">
+                                    <span class="date">October 19, 2019</span>
+                                </a>
+                                <a href="#">
+                                    <h3>Industry as their over draft</h3>
+                                </a>
+                                <div class="owner_info">
+                                    <div class="author_thumb">
+                                        <img src="img/creative_blog/author.png" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <a href="#"><h4>Mesica Chouhan</h4></a>
+                                        <p>Business Owner</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-  <!-- Call to Action -->
-  <section class="content-section bg-primary text-white">
-    <div class="container text-center">
-      <h2 class="mb-4">The buttons below are impossible to resist...</h2>
-      <a href="#" class="btn btn-xl btn-light mr-4">Click Me!</a>
-      <a href="#" class="btn btn-xl btn-dark">Look at Me!</a>
     </div>
-  </section>
 
-  <!-- Map -->
-  <section id="contact" class="map">
-    <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
-    <br />
-    <small>
-      <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
-    </small>
-  </section>
+    <!-- testimonial_area  -->
+    <div class="testimonial_area ">
+            <div class="outline_text white testmonial d-none d-lg-block">
+                    Testimonial
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="testmonial_active owl-carousel">
+                            <div class="single_carousel">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-6">
+                                        <div class="single_testmonial text-center">
+                                                <div class="thumb">
+                                                        <img src="img/testmonial/thumb.png" alt="">
+                                                </div>
+                                            <p>Innovative brewing methods and our coffee is sourced from various parts of the globe and are roasted to perfection. </p>
+                                            <div class="testmonial_author">
+                                                <h3>Mesica Chouhan</h3>
+                                                <span>Mesica Chouhan</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single_carousel">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-6">
+                                        <div class="single_testmonial text-center">
+                                                <div class="thumb">
+                                                        <img src="img/testmonial/thumb.png" alt="">
+                                                </div>
+                                            <p>Innovative brewing methods and our coffee is sourced from various parts of the globe and are roasted to perfection. </p>
+                                            <div class="testmonial_author">
+                                                <h3>Mesica Chouhan</h3>
+                                                <span>Mesica Chouhan</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single_carousel">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-6">
+                                        <div class="single_testmonial text-center">
+                                                <div class="thumb">
+                                                        <img src="img/testmonial/thumb.png" alt="">
+                                                </div>
+                                            <p>Innovative brewing methods and our coffee is sourced from various parts of the globe and are roasted to perfection. </p>
+                                            <div class="testmonial_author">
+                                                <h3>Mesica Chouhan</h3>
+                                                <span>Mesica Chouhan</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- /testimonial_area  -->
+    
+    <!-- discuss_projects_start  -->
+    <div class="discuss_projects">
+            <div class="outline_text white project d-none d-lg-block">
+                    Let’s talk
+            </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="project_text text-center">
+                        <h3>Let’s start your project with us</h3>
+                        <a class="boxed-btn3" href="#">Start Talking</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 {%endblock%}

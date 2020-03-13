@@ -1,0 +1,44 @@
+.service_area{
+    padding-top: 200px;
+    padding-bottom: 170px;
+    position: relative;
+    @media #{$mobile_device} {
+        padding-bottom: 30px;
+        padding-top: 60px;
+    }
+    @media #{$tablet_device} {
+        padding-bottom: 50px;
+        padding-top: 100px;
+    }
+    .single_service{
+        @include transition(.3s);
+        margin-bottom: 30px;
+        @media #{$tablet_device}{
+            padding: 30px 20px;
+        }
+        .icon{
+
+        }
+        h3{
+            font-size: 26px;
+            font-weight: 400;
+            color: #040E27;
+            margin-top: 37px;
+            padding-bottom: 10px;
+            @media #{$tablet_device} {
+                font-size: 22px;
+            }
+        }
+        p{
+            margin-bottom: 0;
+            br{
+                @media #{$tablet_device} {
+                    display: none;
+                }
+                @media #{$mid_device} {
+                    display: none;
+                }
+            }
+        }
+    }
+}

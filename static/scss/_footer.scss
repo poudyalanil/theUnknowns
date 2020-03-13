@@ -1,18 +1,128 @@
-footer.footer {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  .social-link {
-    display: block;
-    height: 4rem;
-    width: 4rem;
-    line-height: 4.3rem;
-    font-size: 1.5rem;
-    background-color: $primary;
-    transition: background-color 0.15s ease-in-out;
-    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
-    &:hover {
-      background-color: darken($primary, 10%);
-      text-decoration: none;
+.footer{
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: #040E27;
+    .footer_top{
+        padding-top: 116px;
+        padding-bottom: 190px;
+        @media #{$mobile_device} {
+            padding-top: 60px;
+            padding-bottom: 30px;
+        }
+        .footer_widget{
+            margin-bottom: 30px;
+            .footer_title{
+                font-size: 20px;
+                font-weight: 400;
+                color: #fff;
+                text-transform: capitalize;
+                margin-bottom: 40px;
+                font-family: $font1;
+                @media #{$mobile_device} {
+                    margin-bottom: 20px;
+                }
+            }
+            .footer_logo{
+                font-size: 22px;
+                font-weight: 400;
+                color: #fff;
+                text-transform: capitalize;
+                margin-bottom: 40px;
+                @media #{$mobile_device} {
+                    margin-bottom: 20px;
+                }
+            }
+            p {
+
+                color: #596672;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 42px;
+                a{
+                    color: #596672;
+                    &:hover{
+                        color: #fff;
+                    }
+                }
+            
+            }
+            p.footer_text{
+                font-size: 16px;
+                color: #B2B2B2;
+                margin-bottom: 23px;
+                font-weight: 400;
+                line-height: 28px;
+            }
+            ul{
+                li{
+                    color: #AAB1B7;
+                    font-size: 14px;
+                    line-height: 42px;
+                    a{
+                        color: #AAB1B7;
+                        font-weight: 400;
+                        font-family: $font2;
+                        &:hover{
+                            color: #fff
+                        }
+                    }
+                }
+            }
+            .newsletter_text{
+                font-size: 13px;
+                color: #596672;
+                line-height: 26px;
+            }
+        }
     }
-  }
+    .copy-right_text{
+        padding-bottom: 47px;
+        .copy_right{
+            font-size: 15px;
+            color: #596672;
+            margin-bottom: 0;
+            font-weight: 500;
+            @media #{$mobile_device} {
+                font-size: 13px;
+            }
+            a{
+                color: #0181F5;
+            }
+        }
+    }
+    .socail_links{
+        margin-top: 47px;
+        @media #{$mobile_device} {
+            margin-top: 30px;
+        }
+        ul{
+            li{
+                display: inline-block;
+
+                a{
+                    font-size: 15px;
+                    color: #C3B2F0;
+                    width: 40px;
+                    height: 40px;
+                    display: inline-block;
+                    text-align: center;
+                    background: transparent;
+                    @include border-radius(50%);
+                    line-height: 40px !important;
+                    margin-right: 7px;
+                    color: #FFFFFF;
+                    line-height: 40px !important;
+                    border: 1px solid #E8E8E8;
+                    color: #E8E8E8;
+                 &:hover{
+                     color: #fff !important;
+                     background: #0181F5;
+                     border-color: transparent;
+                 }
+                }
+            }
+        }
+    }
 }

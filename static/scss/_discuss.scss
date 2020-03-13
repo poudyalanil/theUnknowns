@@ -1,0 +1,37 @@
+.discuss_projects{
+    background: #0181F5;
+    padding: 170px 0 155px 0;
+    position: relative;
+    z-index: 13;
+    z-index: 13;
+    @media #{$mobile_device} {
+        padding: 70px 0 55px 0;
+    }
+    @media #{$tablet_device} {
+        padding: 120px 0 105px 0;
+    }
+    .project_text{
+        h3{
+            color: #fff;
+            font-size: 60px;
+            font-weight: 400;
+            margin-bottom: 52px;
+            @media #{$mobile_device} {
+                font-size: 38px;
+            }
+            @media #{$tablet_device} {
+                font-size: 48px;
+            }
+        }
+        p{
+            color: #fff;
+            font-size: 15px;
+            line-height: 28px;
+            margin-bottom: 30px;
+            margin-top: 12px;
+        }
+        a{
+
+        }
+    }
+}

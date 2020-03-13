@@ -1,0 +1,100 @@
+
+.about_area{
+    padding-bottom: 5px;
+    .about_thumb{
+        img{
+            width: 100%;
+        }
+    }
+    .about_info{
+        padding-left: 68px;
+        @media #{$mobile_device} {
+            padding-left: 0;
+            margin: 20px 0;
+        }
+        @media #{$tablet_device} {
+            padding-left: 0;
+            margin: 0 0;
+            padding-top: 20px;
+        }
+        @media #{$mid_device} {
+            padding-left: 20px;
+        }
+        h3{
+            font-size: 50px;
+            font-weight: 400;
+            line-height: 62px;
+            margin-bottom: 30px;
+            @media #{$tablet_device} {
+                font-size: 30px;
+                line-height: 42px;
+                margin-bottom: 20px;
+            }
+            @media #{$mobile_device} {
+                font-size: 30px;
+                line-height: 42px;
+                margin-bottom: 20px;
+            }
+            br{
+                @media #{$tablet_device} {
+                    display: none;
+                }
+                @media #{$mobile_device} {
+                    display: none;
+                }
+            }
+        }
+        p{
+            font-size: 16px;
+            line-height: 28px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.about_wrap_area{
+    padding-top: 188px;
+    @media #{$tablet_device} {
+        padding-top: 70px;
+    }
+    @media #{$mobile_device} {
+        padding-top: 70px;
+    }
+   .about_heading{
+       margin-bottom: 84px;
+       @media #{$tablet_device} {
+        margin-bottom: 50px;
+        }
+       @media #{$mobile_device} {
+        margin-bottom: 30px;
+        }
+       h3{
+          font-size: 50px; 
+          font-weight: 400;
+          color: #040E27;
+          @media #{$tablet_device} {
+            font-size: 30px;
+        }
+          @media #{$mobile_device} {
+            font-size: 30px;
+        }
+       }
+   } 
+   .about_info_wrap{
+       .single_info{
+            margin-bottom: 95px;
+            @media #{$mobile_device} {
+                margin-bottom: 30px;
+            }
+            @media #{$tablet_device} {
+                margin-bottom: 30px;
+            }
+       }
+       .about_banner{
+           img{
+               width: 100%;
+           }
+       }
+   }
+}

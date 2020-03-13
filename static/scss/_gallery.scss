@@ -1,0 +1,180 @@
+
+.mt-50{
+    margin-top: 50px;
+    @media #{$mobile_device} {
+        margin-top: 30px;
+    }
+}
+.mb-50{
+    margin-bottom: 50px;
+    @media #{$mobile_device} {
+        margin-bottom: 30px;
+    }
+}
+.portfolio_area{
+    .more_works{
+        background: #040E27;
+        padding: 35px 0;
+        a{
+            font-size:20px ;
+            font-family: $font1;
+            color: #fff;
+            font-weight: 400;
+        }
+    }
+    .portfolio_wrap{
+        overflow: hidden;
+    }
+    .single_gallery{
+        overflow: hidden;
+        width: 35%;
+        position: relative;
+        z-index: 6;
+        float: left;
+        @media #{$mobile_device} {
+            width: 100%;
+        }
+        @media #{$tablet_device} {
+            width: 50%;
+        }
+        @media #{$mid_device} {
+            width: 50%;
+        }
+        @media #{$large_device} {
+            width: 33.33333%;
+        }
+        &::before{
+            width: 351px;
+            height: 351px;
+            background: #0181F5;
+            content: '';
+            position: absolute;
+            left: 0;
+            @include border-radius(50%);
+            left: -26%;
+            bottom: -30%;
+            z-index: 1;
+            opacity: 0;
+            @include transition(.3s);
+            @media #{$mobile_device} {
+                width: 250px;
+                height: 250px;
+             }
+        }
+        &.small_width{
+            width: 30%;
+            @media #{$mobile_device} {
+                width: 100%;
+            }
+            @media #{$tablet_device} {
+                width: 50%;
+            }
+            @media #{$mid_device} {
+                width: 50%;
+            }
+            @media #{$large_device} {
+                width: 33.33333%;
+            }
+        }
+        .thumb{
+            border-radius:0;
+            height: 484px;
+            @media #{$tablet_device} {
+               height: 300px;
+            }
+            @media #{$mid_device} {
+                height: 370px;
+            }
+            @media #{$large_device} {
+               height: 350px;
+            }
+            @media #{$mobile_device} {
+                height: auto;
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                @include transform(scale(1.2));
+                @include transition(.3s);
+
+
+            }
+        }
+        .gallery_hover{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            .hover_inner{
+                position: relative;
+                z-index: 12;
+                padding-bottom: 60px;
+                padding-left: 40px;
+                @media #{$mobile_device} {
+                    padding-left: 15px;
+                    padding-bottom: 20px;
+                 }
+                span{
+                    display: block;
+                    font-size: 14px;
+                    color: #B3D9FC;
+                    font-weight: 400;
+                    font-family: $font1;
+                    margin-bottom: 13px;
+                    position: relative;
+                    left: 10%;
+                    opacity: 0;
+                    @include transition(.3s);
+                    @media #{$mobile_device} {
+                        font-size: 14px;
+                     }
+                }
+                h3{
+                    font-size: 30px;
+                    color: #fff;
+                    font-weight: 400;
+                    font-family: $font1;
+                    line-height: 1;
+                    position: relative;
+                    left: 15%;
+                    opacity: 0;
+                    @include transition(.4s);
+                    @media #{$mobile_device} {
+                       font-size: 20px;
+                    }
+                }
+            }
+            
+        }
+        &:hover{
+            &::before{
+                opacity: 1;
+                left: -6%;
+                bottom: -20%;
+                @media #{$mobile_device} {
+                    left: -10%;
+
+                 }
+                @media #{$tablet_device} {
+                    left: -13%;
+
+                 }
+                @media #{$large_device} {
+                    left: -10%;
+
+                 }
+            }
+            .hover_inner{
+                h3,span{
+                    opacity: 1 !important;
+                    left: 0%;
+                }
+            }
+            .thumb{
+                img{
+                    @include transform(scale(1));
+                }
+            }
+
+        }
+    }
+}
